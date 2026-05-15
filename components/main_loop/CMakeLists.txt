@@ -1,4 +1,6 @@
-set(srcs esp32/main_queue.cc) 
+set(srcs "") 
+set(platform_srcs esp32/main_queue.cc host/main_queue.cc) 
+include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake")
 
 idf_component_register(SRCS ${srcs} 
     INCLUDE_DIRS "./include" 
